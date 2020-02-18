@@ -20,16 +20,23 @@ foreach ($_SESSION as $key=>$value) {
 }
 $query = trim($query, ' WHERE');
 $query = trim($query, ' AND');
-echo $query;
+//echo $query;
 $products = $connect->query($query)->fetchAll(PDO::FETCH_ASSOC);
 if (!$products)
 {
     echo 'Товаров не найдено';
 }
 ?>
-
+<?php
+$color =[
+    'белый' => 'white',
+    'желтый' => 'yellow',
+    'красный' => 'red',
+    'черный' => 'gray'
+]
+?>
 <?php foreach ($products as $product):?>
-    <div class="col-3">
+    <div class="col-3 <?=$color[$product['color']]?>">
         <div class="card">
             <div class="card-title"><?=$product['cat']?> </div>
             <div class="card-body">

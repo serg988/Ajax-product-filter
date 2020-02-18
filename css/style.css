@@ -16,3 +16,15 @@ select{
 .card-body {
     margin: auto;
 }
+div.white{
+     background-color: aliceblue;
+}
+div.yellow{
+    background-color: yellow;
+}
+div.red{
+    background-color: red;
+}
+div.gray{
+    background-color: gray;
+}
